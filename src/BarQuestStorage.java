@@ -16,8 +16,6 @@ public class BarQuestStorage {
 
         int combatturn = dungeonworld.userInput.nextInt();
 
-
-
         if(combatturn == 1){//Player attacks
             System.out.println("Please pick a slime to hit\n1. Slime One\n2. Slime Two\n3. Slime Three");
             int pSlimeHit = dungeonworld.userInput.nextInt();
@@ -42,8 +40,6 @@ public class BarQuestStorage {
         playerHp = playerHp-slimeHit;
         playerHp = playerHp-slimeHit;
 
-
-
         if(playerHp <= 0){//start death
             System.out.println("You died\nTry again from the start");
             System. exit(0);
@@ -52,11 +48,7 @@ public class BarQuestStorage {
         if(slime1<=0 && slime2<=0 && slime3<=0){
             elves = !elves;
         }//
-
-
     }
-
-
 
     public static void elfTribe(int playerHplvl2, int playerDamlvl2, boolean elves, boolean vampire){
 
@@ -65,8 +57,6 @@ public class BarQuestStorage {
         int elf2 = 10;
         int elf3 = 10;
         int elf4 = 10;
-
-
 
         System.out.println("As you walk further into the forest you see a tribe full of elves having fun\n"
                 +"What would you like to do \n1.interact with them \n2.fight them \n3.walk past them");
