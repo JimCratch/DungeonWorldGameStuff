@@ -13,7 +13,7 @@ public class Quests {
         String Answer = dungeonworld.userInput.nextLine();
 
         if (Answer.equals("2")) {
-            System.exit(0);
+            StartGame.ReturnToThisPoint();
         }
         else {
 
@@ -103,8 +103,8 @@ public class Quests {
         if (barquest == 1){//start barquest
             //Bar questline
             System.out.println("You leave the bar and the city in order to find an adventure worthy enough to allow you to go into the bar."
-                    + "\n As you go out you see a cave that you could enter "
-                    + "\nBut you also could go into the magical woods that surely have many magical creatures");
+                    + "\n1.As you go out you see a cave that you could enter "
+                    + "\n2.But you also could go into the magical woods that surely have many magical creatures");
 
             int baradvent = dungeonworld.userInput.nextInt();
 
@@ -115,7 +115,7 @@ public class Quests {
                 boolean vampire = false;
 
                 System.out.println("As you go into the woods you see several slimes surrounding you"
-                        +"PREPARE TO FIGHT");
+                        +"\nPREPARE TO FIGHT");
                 barqueststorage.slimes(playerHp, playerDam, elves);
 
                 barqueststorage.elfTribe(playerHplvl2, playerDamlvl2, elves, vampire);

@@ -19,16 +19,17 @@ public class BarQuestStorage {
 
 
         if(combatturn == 1){//Player attacks
+            System.out.println("Please pick a slime to hit\n1. Slime One\n2. Slime Two\n3. Slime Three");
             int pSlimeHit = dungeonworld.userInput.nextInt();
             if (pSlimeHit ==1){
                 slime1= slime1-playerDam;
-                System.out.print("Slime 1 is at "+slime1+" health");
+                System.out.print("Slime 1 is at "+slime1+" health ");
             }if (pSlimeHit ==2){
                 slime2 = slime2-playerDam;
-                System.out.print("Slime 2 is at "+slime2+" health");
+                System.out.print("Slime 2 is at "+slime2+" health ");
             }if (pSlimeHit ==3){
                 slime3 = slime3-playerDam;
-                System.out.print("Slime 3 is at "+slime3+" health");
+                System.out.print("Slime 3 is at "+slime3+" health ");
             }
 
         }//end attack
@@ -71,7 +72,7 @@ public class BarQuestStorage {
                 +"What would you like to do \n1.interact with them \n2.fight them \n3.walk past them");
 
         int elfChoice = dungeonworld.userInput.nextInt();
-        while(elves == true){
+        while(!elves){
             if(elfChoice == 1){
                 System.out.println("As you go up to the elves they seem to take a liking to you and you start prtying with them\n"
                         +"You seem to have lots of fun with the elves and they give you plenty of food\nThey allow you to fall asleep in one of their tents\n"
@@ -82,6 +83,7 @@ public class BarQuestStorage {
 
                     System.out.println("As you sleep in the elven tents, you wake up bright and early in order to get a head start on the adventure that will come soon");
                     vampire = !vampire;
+                    elves = true;
                 }
                 if(elfTribeChoice == 2){
                     System.out.println("As you stay with the elves you decide to stay with them as you eventually become the chief of their tribe\n"
